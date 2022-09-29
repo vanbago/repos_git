@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+{% block content %}
+<h1>LA BOUTIQUE</h1>
+
+{% for product in products %}
+    <h2> {{ product.name }} </h2>
+    <img src="{{ product.images }}" alt="{{ product.name }}"/>
+{% endfor %} 
+
+{% endblock%}
