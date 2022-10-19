@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %} 
+
+{% block title %} Mon blog {% endblock%} 
+
+ 
+
+
+{% block content %}
+
+<h1> Bienvenue sur mon blog. ici! on parle de sciences de technologie de psychologie et d'information </h1>
+
+{% for article in all_articles %}
+    <div class="article">
+    	<h3>{{ article.title }}</h3>
+    	<p> {{ article.content|truncatewords_html:90 }} </p>
+    	<p><a href="{% url 'read' article.id article.slug %}"> Lire la suite </a></p>
+    </div>
+    {% empty %}
+    <p>Aucun article .</p>
+{% endfor %}
+
+{% endblock %}

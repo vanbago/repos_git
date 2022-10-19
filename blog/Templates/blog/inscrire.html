@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+
+
+{% block title %}
+{% endblock %}
+
+
+
+{% block content %}
+
+    <h1> S' incrire </h1>
+    <form method="">
+    	
+    	{% csrf_token %}
+    	<p>
+    		<label for="username"> username</label>
+    		<input id = "username", type="" name="username">
+    	</p>
+
+    	<p>
+    		<label for="password"> password</label>
+
+    		<input id="password", type="password" name="password">
+    	</p>
+
+    	<button type="submit"> s'incrire</button>
+
+
+    </form>
+{% endblock %}
+

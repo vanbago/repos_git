@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+   
+    Mes contact
+
+{% endblock %}
+
+
+
+{% block content %}
+
+    {% if envoi %} Votre message a bien été envoyé {% endif %}
+
+    <form action="{% url 'contacts' %}" method="post">
+    	
+    	{% csrf_token %}
+
+    	{{ form.as_p }}
+
+    	<input type="submit" value="Submit">
+    
+    </form>
+
+{% endblock %}
